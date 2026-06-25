@@ -1,14 +1,13 @@
 // Shared types and interfaces for the factory-form example
 
-export type ComponentType =
-    | 'text'
-    | 'number'
-    | 'checkbox'
-    | 'dropdown'
-    | 'collectionBlock'
-    | 'singleBlock'
-    | 'form'
-    | 'interview'
+// The type keys a leaf Element can take
+export type ElementType = 'text' | 'number' | 'checkbox' | 'dropdown'
+
+// The type keys a Block can take
+export type BlockType = 'collectionBlock' | 'singleBlock'
+
+// Every type key the FormFactory facade understands
+export type ComponentType = ElementType | BlockType | 'form' | 'interview'
 
 export type DropdownOption = {
     label: string
@@ -20,7 +19,7 @@ export interface IElement {
     label: string
     hint: string
     isRequired: boolean
-    type: ComponentType
+    type: ElementType
     value: string | number | boolean
     options?: DropdownOption[]
 }
@@ -32,7 +31,7 @@ export interface ICollectionItem {
 
 // A group of inputs
 export interface IBlock {
-    type: ComponentType
+    type: BlockType
     items: ICollectionItem[]
 }
 
