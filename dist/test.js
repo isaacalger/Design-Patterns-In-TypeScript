@@ -1,11 +1,16 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const cat_1 = require("./cat");
+const cat_2 = require("./cat");
 // The key of a dictionary can be of any type and name
 let a;
 let b;
-a = { a: 'car', b: 'train', c: 'plane', d: 'boat' };
+let d;
+d = 1 == 1;
+a = { 'a': 'car', b: 'train', c: 'plane', d: 'boat' };
 b = { 1: 'car', 2: 'train', 3: 'plane', 4: 'boat' };
 // and can be retrieved as such
-console.log(a['a']);
+console.log(a.a);
 console.log(b[2]);
 // Since Dictionaries are really just objects. You can also retrieve
 // a dictionary's value using object notation if the keys are strings
@@ -21,3 +26,18 @@ console.log(b);
 let c;
 c = { 1: [1, 2, 3], 2: [4, 5, 6], 3: [7, 8, 9], 4: [10, 11, 12] };
 console.log(c);
+let arr = [1, 2, 3, 4];
+arr.pop();
+console.log(arr);
+let catA = new cat_1.Cat('Whiskers');
+catA.meow();
+catA.meow();
+catA.meow();
+catA.meow();
+catA.meow();
+let tabby = new cat_2.Tabby('Fluffy');
+tabby.meow();
+tabby.meow();
+tabby.meow();
+tabby.meow();
+tabby.meow();

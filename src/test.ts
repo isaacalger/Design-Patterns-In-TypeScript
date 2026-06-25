@@ -1,10 +1,17 @@
+import { Cat } from './cat';
+import { Tabby } from './cat';
+
 // The key of a dictionary can be of any type and name
 let a: { [key: string]: string }
 let b: { [id: number]: string }
-a = { a: 'car', b: 'train', c: 'plane', d: 'boat' }
+let d: boolean
+d = 1 == 1;
+
+
+a = { 'a': 'car', b: 'train', c: 'plane', d: 'boat' }
 b = { 1: 'car', 2: 'train', 3: 'plane', 4: 'boat' }
 // and can be retrieved as such
-console.log(a['a'])
+console.log(a.a)
 console.log(b[2])
 
 // Since Dictionaries are really just objects. You can also retrieve
@@ -24,3 +31,21 @@ console.log(b)
 let c: { [id: number]: number[] }
 c = { 1: [1, 2, 3], 2: [4, 5, 6], 3: [7, 8, 9], 4: [10, 11, 12] }
 console.log(c)
+
+let arr: number[]= [1,2,3,4]
+arr.pop()
+console.log(arr);
+
+let catA = new Cat('Whiskers');
+catA.meow();
+catA.meow();
+catA.meow();
+catA.meow();
+catA.meow();
+
+let tabby = new Tabby('Fluffy');
+tabby.meow();
+tabby.meow();
+tabby.meow();
+tabby.meow();
+tabby.meow();

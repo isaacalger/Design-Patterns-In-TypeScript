@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Design Patterns In TypeScript",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p ./src",
+    "watch": "tsc -p ./src -w"
   },
   "repository": {
     "type": "git",
@@ -21,9 +23,9 @@
   "homepage": "https://github.com/Sean-Bradley/Design-Patterns-In-TypeScript#readme",
   "devDependencies": {
     "@types/node": "^14.14.41",
-    "@typescript-eslint/eslint-plugin": "^4.22.0",
-    "@typescript-eslint/parser": "^4.22.0",
-    "eslint": "^7.24.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.1",
     "typescript": "^5.3.3"
   }
 }
